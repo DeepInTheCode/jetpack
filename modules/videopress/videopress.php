@@ -22,7 +22,7 @@ class Jetpack_VideoPress {
 
 	function __construct() {
 		$this->version = time(); // <s>ghost</s> cache busters!
-		add_action( 'jetpack_modules_loaded', array( $this, 'jetpack_modules_loaded' ) );
+		add_action( 'init', array( $this, 'jetpack_modules_loaded' ) );
 		add_action( 'jetpack_activate_module_videopress', array( $this, 'jetpack_module_activated' ) );
 		add_action( 'jetpack_deactivate_module_videopress', array( $this, 'jetpack_module_deactivated' ) );
 
